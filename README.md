@@ -5,7 +5,7 @@ Areas marked with '\*' are important, areas marked with ~ are not so important a
 
 AWS Certificate Solutions Architect Associate Exam
 --------------------------------------------------
-Services covered on Exam
+**Services covered on Exam**
 
     Compute ***
     AWS Global Infrastructure ***
@@ -17,7 +17,7 @@ Services covered on Exam
     Desktop & App Streaming (Very high level, workspaces)
     Management Tools (Little bit)
 	
-Need to know:
+**Need to know:**
 
     How to build a VPC from memory. - [See here](#NetworkingContentDelivery)
     'Lambda' is important, but may not be on the course. There is a course in Cloud Guru on Lambas to look at
@@ -25,7 +25,7 @@ Need to know:
     What is WorkSpace? (It's a virtual Desktop in the cloud)
     VDI?
 	
-AWS Global Infrastructure:
+**AWS Global Infrastructure:**
 
     A Region: has 2 or more availability zones. Geographical area
     An Availability Zone: is just a Data Center
@@ -33,7 +33,7 @@ AWS Global Infrastructure:
         Cache images, content in another area so the region doesn't need to be reached everytime (only for the first person)
 
 ## NetworkingContentDelivery<a name="NetworkingContentDelivery"></a>
-Networking & Content Delivery:
+**Networking & Content Delivery:**
 
     VPC***: Virtual Private Cloud, virtual data center where you deploy assets. You can connect multiple VPC's together
     Route53*: Amazon's DNS. Why the name: 53 is the Port for DNS. Route66 is the first interstate across the US
@@ -45,7 +45,7 @@ Networking & Content Delivery:
     ~Lambda~: 
     ~Lightsail~: Out of the box cloud, deploys your site for you, for users who don't want to learn AWS
 
-Storage:
+**Storage:**
 
     S3***: Simple Storage Service A Virtual Disk in the cloud to store objects (Files). *Object-based storage*. One of the first services
     Glacier: Low cost data archiving. A place to archive from S3 off.
@@ -53,20 +53,20 @@ Storage:
     ~EBS~: Elastic Block Store A virtual disk to attach ES2 isntances to
     Storage Gateway: A virtual machine image normally installed on premise. A way to connect S3 to On premise datacenter / headcourters, connects between S3 and on premise
 	
-Databases:
+**Databases:**
 
     ~RDS: Relational Database Service consists of Mysql, PostgreSQL, MariaDb.. Aurora & more.
     DynamoDB**: Non-relationsal database. AKA NoSQL database Very scalable, high performance
     ~Redshift: Amazon's Data warehousing solutions. Example usage: Running reports, instead of a heavy load on the production database, send a copy of the DB to Redshift and run reports there
     ~Elasticache: Cache data in the cloud *Take a load of your database*
 	
-Migration:
+**Migration:**
 
     Snowball: Small appliance, used for sending data? Snowball-edge has compute capacity added.
     DMS: Database Migration Services - Used for migrarting databases to other regions, redshift etc. You can move Databases. E.G from Oracle to Aurara
     ~SMS~: Server Migration Service - Migrate Virtual Machines. Specifically VMware virtual machines to replicate to AWS cloud 50 concurrently at the same time
 
-Analytics:
+**Analytics:**
 
     ~Athena: Allows you to run SQL queries on S3
     ~EMR: Elastic Map Reduce produce large amounts of data. E.G log analysis, market analysis. Uses Hadoop.
@@ -76,7 +76,7 @@ Analytics:
     Data Pipeline: Move data from one place to another. E.g from S3 to DynamoDB or visa-versa. A pipeline job
     ~Quick site~: Business Analytics tools make rich dashboards for data.
 
-Security & Identity:
+**Security & Identity:**
 
     IAM***: Identity Access Management
     ~Inspector~: Agent installed on a VM to inspect the VM and does reporting on Security of those VMs.
@@ -85,7 +85,7 @@ Security & Identity:
     ~WAF: Web Application firewalls Application level protection. E.G SQL Injection, cross site scripting
     ~Artifacts: Documentation in the AWS console
 
-Management Tools:
+**Management Tools:**
 
     Cloud Watch: Used to monitor performance. E.G ES2 RAM, DISK utilization
     Cloud Formation*: Turn infrastructore into code. Document that describes the AWS environment
@@ -95,7 +95,7 @@ Management Tools:
     ~Service Catalog~: 
     Trusted Advisor: Gives you tips on security fixes, cost optimizations etc. Automated way of scanning your environment to give you tips
 
-Application Services:
+**Application Services:**
 
     ~Step Functions~: Way of visuilizing what's going on in your application E.g what microservices you're using
     SWF***: Simple Workflow - Way of coordinating automated & human tasks. E.G ordering a product a human needs to deliver / get.
@@ -103,14 +103,14 @@ Application Services:
     ~AppStream~: Way of streaming desktop applications to users
     Elastic Transcoder: Transfer video format to something suitable for different devices. E.G different format/resolution for an Ipad vs desktop
 
-DeveloperTools:
+**DeveloperTools:**
 
     CodeCommit: Basically Github. A place to store code in the cloud, can be open / closed
     CodeBuild: Paid for by the minute, a way of compiling your code
     CodeDeploy: Way of deploying code to ES2 instances. Very automated
     CodePipeline: ??
 
-Mobile Services:
+**Mobile Services:**
 
     Mobile HUB: Add, configure design features for a mobile app. E.g push notifications, backend logic, User auth, data storage, content delivery, analytics
     ~Cognito~: User sign in. E.G using Social login, gmail credentials etc
@@ -118,21 +118,21 @@ Mobile Services:
     Mobile analytics: Collect & analyse app usage data
     ~PinPoint~: Enables and engage your application users. Collect data on what users are doing with your app
 
-Business Productivity:
+**Business Productivity:**
 
     ~WorkDocs~: store word docs in the cloud
     ~WorkMail~: Send/recieve emails in AWS
 
-Internet Of Things:
+**Internet Of Things:**
 
     ~iOT~: Internet Of Things
 	
-Desktop & App Streaming:
+**Desktop & App Streaming:**
 
     Workspaces: Way of having your desktop in the cloud.
     AppStream 2.0: Way of streaming desktop applications to users
-	
-Artificial Intelligence:
+
+**Artificial Intelligence:**
 
     Alexa: Amazon's voice service in the cloud. Echo's uses it
     lex: You no longer need an Echo to use Alexa, you can connect any device to Alexa
@@ -140,14 +140,14 @@ Artificial Intelligence:
     ~Machine Learning~: Give AWS a dataset for ML to predict outcomes
     Rekognition: Upload pictures and it'll tell you whats in that picture
 
-Messaging:
+**Messaging:**
 
     SNS***: Simple Notifcation Services. Notify you via text, or email. Or even HTTP endpoints
     SQS***: Decoupling applications (If one system goes does, the request will still be queued, another ES2 can pick it up). A queue system. 
     SES***: Simple email service. A way of sending and recieving emails
 
 ## ObjectBasedStorage<a name="ObjectBasedStorage"></a>
-Object based storage:
+**Object based storage:**
     A place to store files, Not a place to install things
     
 Block based storage:
