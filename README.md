@@ -1,9 +1,11 @@
 # AWS-CloudGuru-study-notes
 Notes taken from cloud guru videos in preparing for the 'AWS Certificate Solutions Architect Associate Exam'.
 
+Areas marked with '\*' are important, areas marked with ~ are not so important and areas marked with two ~'s should not come up in the exam at all.
+
 AWS Certificate Solutions Architect Associate Exam
 --------------------------------------------------
-Services covered on Exam (*** are very important):
+Services covered on Exam
 
     Compute ***
     AWS Global Infrastructure ***
