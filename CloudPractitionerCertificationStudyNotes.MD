@@ -100,6 +100,9 @@ Types of Cloud Computing Deployments:
 
 AWS Global Infrastructure
 -------------------------
+Helps customers achieve lower latency and higher throughput & Ensure data is only accessible in Regions you specify
+
+**Terms**
 Availability Zone - Datacenter or several data centres close together
 Region - Geographical area consisting of 2 or more Availability Zones
 Edge Location - caching location  E.G CDN, CloudFront etc
