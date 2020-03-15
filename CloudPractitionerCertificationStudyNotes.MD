@@ -175,6 +175,9 @@ Think of it like renting a computer.
 
 ### IOPS
 **IOPS** - Input Ouput Per Second
+
+### VPC
+**VPC** - Virtual Private Cloud
 	
 	
 Types of Cloud Computing Deployments:
