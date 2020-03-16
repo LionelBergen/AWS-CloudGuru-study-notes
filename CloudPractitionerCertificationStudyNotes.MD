@@ -61,6 +61,7 @@ EC2 is a compute based service. It is Not serverless. It's a server!
 Use a private key to connect to EC2
 Security Groups are virtual firewalls in the cloud. You need to open ports to use them
 Always design for failure. Have one EC2 isntance in each availability zone
+You can interact with AWS in 3 days; Console, CLI, SDKS
 
 
 Q: How would you create a notification for going over $1000? 
