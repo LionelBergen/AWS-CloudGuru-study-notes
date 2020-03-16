@@ -20,6 +20,12 @@ Know what Billing alerts are. When monitiroing is turned on the paying account, 
 	You can still create billing alerts per individual account
 Know what CloudTrail is - per AWS account and enabled per region
 Know the 3 steps in CloudTrail to consolidate logs using an S3 bucket
+Remember what an Organization is - it allows you to attach OU's & accounts and policies to those OU's & accounts
+Know the difference between (quick starts and landing zones)[#Quick starts & aws landing zones]
+[Calculates](#AWS calculators) comes up a lot, be sure to actually use both of them a few times.
+[Calculates](#AWS calculators) Know the difference between the 2 and what each could be used for (C-level exec presentation to move to cloud)
+Consolidated billing allows you to get volume discounts on all of your accounts
+Unused reserved instances of EC2 are applied across the group
 	
 White paper conclusion
 ----------------------
@@ -34,6 +40,7 @@ RCU - Read Capacity Unit
 WCU - Write Capacity Unit
 Meta data  - Data about data
 OU - Organizational Unit
+TCO - Total Cost Ownership
 
 
 How AWS pricing works
@@ -228,9 +235,32 @@ All linked accounts are indenepndent
 		3)Turn on CloudTrail on the ohter accounts and use the bucket in the paying account
 	This way, the buckets can only read to the bucket and not write
 	
+### Quick starts & aws landing zones
+AWS quick starts & AWS landing zones
+------------------------------------
 
+quick start - Automatically setup solutions created by professionals in X technology. For example, An exchange expert setup a SQL exchange AWS solutions.
 
+landing zone - Multi-account organization solutions. Uses AWS best practices to set up multiple accounts with policies etc.
+	Currently E.G shared services account, log archive account, orgnizations account & Security account. 
+	Automating multi-account setup
 
+### AWS calculators
+AWS Calculators
+---------------
+
+AWS helps you calculate costs using a couple different calculators
+
+AWS simple Monthly Calculator - Calculates monthly cost
+
+AWS Total Cost of Ownership Calculator - Cloud aws price VS On location cost comparison (doing it yourself)
+
+**Calculator areas of cost**
+
+Server costs - Software, OS, racks etc
+Storage costs - hardware storage disks
+network costs -  Switches, core/aggregation
+IT labor costs - Server Admin Virtualization Admin
 
 
 
