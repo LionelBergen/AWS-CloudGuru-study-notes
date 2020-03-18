@@ -41,6 +41,7 @@ WCU - Write Capacity Unit
 Meta data  - Data about data
 OU - Organizational Unit
 TCO - Total Cost Ownership
+VAT - Value Added Tax
 
 
 How AWS pricing works
