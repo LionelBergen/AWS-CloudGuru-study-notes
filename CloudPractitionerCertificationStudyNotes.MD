@@ -62,6 +62,11 @@ Use a private key to connect to EC2
 Security Groups are virtual firewalls in the cloud. You need to open ports to use them
 Always design for failure. Have one EC2 isntance in each availability zone
 You can interact with AWS in 3 days; Console, CLI, SDKS
+Load balancers come in 3 different flavours: Application Load Balancers, NEtwork load balancers and Classic load balancers
+Application load balancers are layer 7, network is for extreme performance / static ip addresses and classic is for Tes&dev, keeping costs low. It's outdated
+When using load balancers, use multiple availability zones, incase one goes down
+Business intelligence or data warehousing - go for Redshift
+Speed up performnace of existing databases (frequent Identical queries) go for Elasticache
 
 
 Q: How would you create a notification for going over $1000? 
@@ -179,9 +184,16 @@ Think of it like renting a computer.
 
 ### VPC
 **VPC** - Virtual Private Cloud
+
+### OLTP
+**OLTP** - Online Transaction Processing (see here)[#OLTP VS OLAP]
+
+### OLAP
+**OLAP** - Online Analytics Processing (see here)[#OLTP VS OLAP]
 	
 	
 Types of Cloud Computing Deployments:
+-------------------------------------
 	
 	1) Public Cloud
 		AWS, Azure, GCP
@@ -356,6 +368,30 @@ Enterprise - TAM Technical Account Manager, 15 minute reponse time to urgent sup
 	Use Case: Mission-critical use of AWS
 	$15,000/month
 
+Databases 101
+-------------
+**RDS** (Amazon's Relational Database Service)
+Supports Oracle, MySQL, PostgreSQL, MSSQL, MariaDB and Amazon's proprietary AuroraDB
+Key features 
+	Multi avaialbility zones for disaster recovery    
+	Read replicas - for performance. Can have 5 copies. Writes goes to primary, reads to replicas
+	
+**Non-relational databases (NoSQL/JSON)**
+	Collection = table, document = row key value pairs = columns/fields
+	No structure, so rows have no affect on eachother.
+	Amazon's NoSQL is DynamoDB
+	
+### OLTP VS OLAP
+**OLTP vs OLAP**
+	OLTP - OLTP e.g: Order number 2120121 opens up a row of data such as name, date, address etc
+	OLAP - A lot more complicated, can be used by management to get costs for a region, taxes unit costs etc. Lots of queries. Data warehousing was built for this, so these things don't affect main database and servers. Tools such as SQL server reporting services, oracle hyperion, SAP NetWeaver
+	*Redshift - Amazon's data warehousing solution*
+	
+**ElastiCache**  
+	Caches commonly used database queries in the cloud. Takes a big load off production databases
+	Supports tow open source in memory cahcing engines: Memcached, Redis
+	
+	
 
 
 
