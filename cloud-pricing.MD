@@ -26,6 +26,14 @@ Know the difference between (quick starts and landing zones)[#Quick starts & aws
 [Calculates](#AWS calculators) Know the difference between the 2 and what each could be used for (C-level exec presentation to move to cloud)
 Consolidated billing allows you to get volume discounts on all of your accounts
 Unused reserved instances of EC2 are applied across the group
+
+Additional notes:
+-----------------
+What is EBS?
+What is CloudFormation?
+remember which services are free.
+study the different plans for AWS support plans: https://aws.amazon.com/premiumsupport/compare-plans/
+
 	
 White paper conclusion
 ----------------------
