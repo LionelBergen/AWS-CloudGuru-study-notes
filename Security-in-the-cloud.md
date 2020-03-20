@@ -14,6 +14,7 @@ Lots of scnario questions on which to use: Inspector, CloudWatch, AWS Config, Tr
 
 
 
+ETL - Extract/Transform/Load
 
 
 
@@ -73,7 +74,14 @@ CloudWatch vs AWS Config
 	Can see how configuration changed overtime and how resources are related to one another
 	Examples: Security group change, Port change on an EC2 instance
 
+Athena VS Macie
+---------------
 
+**Athena** - Run SQL queries on S3 buckets. Remember S3 buckets are files and such.
+	Serverless nothing to providision, pay per query / per TB scanned.
+	No need for ETL processes (Extract/Transform/Load)
+	Works directly with data stored in S3
 
+**Uses for Athena** - Querying logs stored in S3, Generating business reports on data stored in S3, Analyse AWS cost and usage reports, run queries on click-stream data
 
-
+**Macie**
