@@ -11,6 +11,11 @@ AWS Inspector used for inspecting EC2 isntances for Vulnribilities
 AWS Trusted advisor inspects your AWS account as a whole. It does more than just security checks it also does cost optmization, perofrmance and fault tolerance
 AWS CloudTrail records console actions and API calls. You can identify the user & IP address, time of each action
 Lots of scnario questions on which to use: Inspector, CloudWatch, AWS Config, Trusted Advisor and CloudTrail. So know the differences between those 5
+AWS Shield free-version does not have application monitoring. Only the paid $3000/month one does (professional?)
+
+Additional notes:
+-----------------
+Practice test had lots of 'which certification is this' type questions which I thought would be irrelavent. Go back and study them
 
 
 
