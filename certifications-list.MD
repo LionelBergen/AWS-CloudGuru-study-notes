@@ -1,15 +1,15 @@
-Cloud Practitioner: Cloud Practisioner Foundationer
+Cloud Practitioner: Cloud Practitioner
 
-Associate Tier:		Certified Solutions Architect Associate 	Certified Developer Associate		Certified Sysops Administrator Associate
-									|													 |				|
-Professional Tier:	Certified Solutions ARchitect Associate								Devops Professional
+Associate Tier:		Solutions Architect Associate 				Developer Associate		Sysops Administrator Associate
+									|											|			|
+Professional Tier:		Solutions Architect Associate						Devops Professional
 
 Speciality:			Security		Advanced Networking			Big Data
 
 
 
 Level of difficulty (According to a video):
-	Developer Associate, Solutions Architect Associate, Sysops Administrator Associate, Security Speciality, Big Data Speciality, Devops Pro, Advanced Networking Speciality, Solutions Architect Professional
+	Cloud Practitioner, Developer Associate, Solutions Architect Associate, Sysops Administrator Associate, Security Speciality, Big Data Speciality, Devops Pro, Advanced Networking Speciality, Solutions Architect Professional
 	
 
 Understanding AWS Certifications
