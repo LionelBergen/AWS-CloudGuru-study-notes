@@ -136,6 +136,19 @@ Which are valid access types for an IAM user?
 
 What is Lightsail?
 
+AWS Organizations??
+
+Understand pricing with a mixture of rerserved and on demand instances. E.G when a reserved instance is unused.  
+Undler a single AWS orgniazation?
+
+AWS storage gateway https://docs.aws.amazon.com/storagegateway/latest/userguide/WhatIsStorageGateway.html
+
+Features of AWS Organizations
+
+EMR??
+
+DMS?? https://aws.amazon.com/dms/
+
 
 Q: How would you create a notification for going over $1000? 
 A: Create a 'BillingAlarm', which uses an [SNS Service] (#SNS) to email you when you go over $1000 in billing
