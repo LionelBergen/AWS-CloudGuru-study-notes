@@ -87,7 +87,13 @@ Know the 6 Advantages of Cloud
 Know the 3 types of cloud computing (IASS, PAAS, SAAS)
 Know the 3 types of computing deployments (public cloud, hybrid, private cloud)
 Choosing the right AWS Region - Data soverignty laws, Latency to end users, AWS services needed
-
+Read up on the different Route 53 policies: https://docs.aws.amazon.com/Route53/latest/DeveloperGuide/routing-policy.html
+Cloudformation template sections: https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/template-anatomy.html
+A CloudFront origin can be a Route53, EC2, S3 bucket
+The collection of a CDN's Edge Locations is called a Distribution.
+To restrict access to an entire bucket, you use bucket policies; and to restrict access to an individual object, you use access control lists.
+Which oare valid access types for an IAM user?
+What is Lightsail?
 
 
 Q: How would you create a notification for going over $1000? 
@@ -237,6 +243,7 @@ Availability Zone - Datacenter or several data centres close together
 Region - Geographical area consisting of 2 or more Availability Zones
 Edge Location - caching location  E.G CDN, CloudFront etc
 ES2 Fleet - A bunch of EC2 instances
+EBS - Elastic Block Store
 
 
 
@@ -355,8 +362,8 @@ Spot Pricing - Applications that have flexible start & end times
 	Z Exteme memory and CPU
 
 ### EBS
-EBS
----
+EBS (Elastic Block Store)
+-------------------------
 
 Virtual disks in the cloud. Allows you to create storage volumes and attach them to Amazon EC2 instances. Once attached you create a file system, or attach an OS etc.
 
