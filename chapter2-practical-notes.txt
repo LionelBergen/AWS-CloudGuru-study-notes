@@ -62,7 +62,8 @@ Reminders of current setup. Should be able to do this all without following the 
 		the load balancer
 		ELB health check
 		(Instances take a few minutes to appear. They may say 'failed' at first)
-	25. 
+	25. Run an elastic beanstalk instance
+	26. Create cloudformation Wordpress stack
 	
 	
 		

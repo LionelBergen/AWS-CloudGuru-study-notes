@@ -70,6 +70,24 @@ Speed up performnace of existing databases (frequent Identical queries) go for E
 Route53 can be used to register domains. It is Amazon's DNS.
 Know all the Compute services (Ex. select all the services that are under 'compute')
 Know what ElasticBeanstalk is. Also configure an instance using it in the Sandbox for practice
+Know what cloudformation is. Also configure for practice
+ElsaticBeanstalk is limited in what it can provision and is not programmable. Cloudformation can provision almost any AWS service and is completly programmable.
+Read the white paper the day before the exam: https://d0.awsstatic.com/whitepapers/AWS_Cloud_Best_Practices.pdf
+Know [which services can be used on premise](#Which AWS Services can be used on premise)
+Cloudwatch is used for monitoring performance
+Cloudwatch can monitor most of AWS as applications un on AWS
+Cloudwatch with Ec2 will monitor events every 5 minutes by default
+Cloudwatch - You have 1 minute intervals by turning on detailed monitoring
+Cloudwatch is all about performance
+Know the difference between cloud watch, cloud trail, aws inspector, aws trusted advisor.
+Systems Manager can be used to manage fleets of EC2 instances & Virtual Machines
+	Can be both inside AWS and on premise. Run command is used to install, patch, uninstall software
+Systems Manager integrates with CloudWatch to give you a dashboard of your entire estate
+Know the 6 Advantages of Cloud
+Know the 3 types of cloud computing (IASS, PAAS, SAAS)
+Know the 3 types of computing deployments (public cloud, hybrid, private cloud)
+Choosing the right AWS Region - Data soverignty laws, Latency to end users, AWS services needed
+
 
 
 Q: How would you create a notification for going over $1000? 
@@ -82,8 +100,12 @@ Overview of amazon Web Services
 -------------------------------
 
 Six advantages of cloud computing: 
-
-
+	Trade capital expense for Variable expense
+	Benefit from massive economies of scale (Amazon can buy sevrers for chepear
+	Stop guessing about capcity
+	ioncrease speed and agility (start developing quickly)
+	Stop spending money reunning and maintianing data centers
+	Go global in minutes
 
 ### Terms
 ### Phrases
@@ -214,6 +236,7 @@ Helps customers achieve lower latency and higher throughput & Ensure data is onl
 Availability Zone - Datacenter or several data centres close together
 Region - Geographical area consisting of 2 or more Availability Zones
 Edge Location - caching location  E.G CDN, CloudFront etc
+ES2 Fleet - A bunch of EC2 instances
 
 
 
@@ -318,6 +341,18 @@ Spot Pricing - Applications that have flexible start & end times
 	
 ### EC2 Instance Types
 ~**EC2 Instance Types**
+	FPGA
+	IOPS
+	Graphics
+	High Disk throughput
+	T Cheap general purpose (think T2 micro)
+	D Density
+	R RAM
+	M Main chocie for general purpose apps
+	C Compute
+	P Graphics (think pic)
+	X Exteme Memory
+	Z Exteme memory and CPU
 
 ### EBS
 EBS
@@ -394,7 +429,184 @@ Key features
 	Caches commonly used database queries in the cloud. Takes a big load off production databases
 	Supports tow open source in memory cahcing engines: Memcached, Redis
 	
+
+
+
+### Architecting for the cloud
+Architecting for the cloud
+--------------------------
+
+**Traditional vs Cloud Computing**
+	IT assets vs provisioned resources (Think CloudFormation, specifying resources based on a configuration)
+	Global, Available, and Scaleable Capacity
+	High Level Managed Services (E.g Machine learning. Products.)
+	Build-in Security
+	Architecting For Cost
+	Operations on AWS
+
+**Scalability**
+	Scale up - E.g Adding more RAM 
+	Scale out - E.G adding more VM's in an elastic load balancer. 
+		Stateless applications
+		Distribute load to multiple loads
+		Stateless Components - E.G a user with cookies cachied. The user can interact as a stateless component
+		Stateful Components - E.G storing the users data in a database
+		Implement Session Affiinity - Sticky sessions
+		Implement Distrubted Processing - E.g multiple EC2 instances working together for a single task
+
+**Instantiating Compute Resources**
+	Bootstrapping - Configure instances using a script
+	Golden images - Image of EC2 instance.
+	Containers
 	
+**Infrastructure As Code**
+	CloudFormation
+	
+**Serverless Management and Deployment**
+
+**Infrastructure Management And Deployment**
+	AWS Elasstic Beanstalk
+	Amazon EC2 auto recovery
+	AWS Systems Manager
+	Auto Scaling
+	
+**Alarms and Events**
+	Amazon CloudWatch Alarms
+	Amazon Cloudwatch Events - E.g adding a watermark via lambda function when an image is uploaded
+	AWS Lambda scheduled events - E.g run lambda function everyday at midnight
+	AWS WAF security automations - E.G respond automatically to SQL injection or XSS
+
+**Loose Coupling**
+	Using the IP address of an EC2 instance or database would be tightly coupled. It's better to use the DNS name and have the EC2/database attached to a load balancer
+	Queue's are also a way to reduce coupling (SQS)
+	
+**Distributed Systems Best Practices**
+	Graceful Failure in Practice - E.G error.html instead of default errors
+	
+**Services Not Servers**
+	Managed Services
+	Serverless Architectures
+
+**Relational Databases (Aurora)**
+	Scalability
+	High availability - multi AZ
+	Anti patterns - If you don't have a need for joins or complex trasnsacitons, use No-SQL instead
+
+**Non-relational databses (DynamoDB)**
+	Scalability
+	High availability - multi AZ
+	Anti patterns - If you need joins or complex trasnsacitons, use relational database instead (Aurora)
+		If you have alrge binary files (audo, video images) consider storing them in S3
+		
+**Data Warehouse (Redshift)**
+	Scalability
+	high avaialbility - multi AZ
+	Anti patterns - not meant for online transaction process (OLTP). It's more for large queries such as reports, to take stress away from production DB
+	
+**Database Search**
+	Scalability
+	High avaialbility
+	
+**Graph Databases**
+	Scalability
+	High availability
+	Amazon Neptune is amazon's graph database
+
+**Managing Increasing Volumes of Data (DataLake)**
+	A Data Lake is an architectural approach that allows storagae of massiver amoutns if data in a central location ready to be categorized, processed naalyzed
+	Data can be stored as-is, no need to convert to a prdefined data and no need to know which questiosn to ask the data beforehand (No schemas / rules)
+	S3 is a good place to store data for a data lake
+
+**Remove single points of failure**
+	Introducing Redundancy
+	detect failure
+	durable Data Storage
+	Automate multi=data centre resiliance (E.g if one region goes down, automatically switches to another)
+	Fault isolation
+	Sharding - Split data across multiple shards for speed
+	
+**Optimize for cost**
+	Right sizing
+	Elasticity
+	Take Advantage of the Variety of Purchasing options (spot, reserved)
+	
+**Caching**
+	Application cache
+	edge caching - cloudfront
+
+**Security**
+	use AWS features for defence in depth
+	Shared security responsibility in the cloud
+	Reduce Privileged Accesss
+	Security as Code
+	Real-Time Auditing
+
+Global AWS Services
+-------------------
+
+**Which AWS Services are Global?**
+	IAM
+	Route53
+	CloudFront
+	SNS
+	SES
+	
+**Global views but are reigional**
+	S3
+	
+### Which AWS Services can be used on premise
+Which AWS Services can be used on premise
+-----------------------------------------
+
+	Snowball - Basically a gigantic disc. Amazon's send it to you and after outting all your data on ship it back to Amazon. 
+		80TB in size
+	Snowball Edge - Same as Snowball, but is also a computer. You can run lambdas functions with it
+		When you cant get AWS connectivity, but need AWS resources.
+	Storage gateway - Like snowball but Stays on Premise at all times. Can be virtual or physical.
+		Way of caching files inside a datacenter or headquarters and replicates files to S3. If you lose connectivity, you'd still have access to files
+	CodeDeploy - Way of deploying code to EC2 instances or on-premise instances
+	Opsworks - similair to ElasticBeanstalk. Uses shef?. Deploy code to EC2 instance or on premise
+	IoT Greengrass
+
+CloudWatch 101
+--------------
+
+**What is CloudWatch?**
+	Monitoring service to monitor AWS resources & applications run on AWS
+	
+**What can cloudWatch monitor?**
+	Compute
+		EC2 Instances
+		Autoscaling Groups
+		Elastic Load Balancers
+		Route53 Health checks
+	Storage & Content Delivery 
+		EBS volumes
+		Storage Gateways
+		CloudFront
+	Host level Metrics
+		CPU
+		Network
+		Disk
+		Status Check
+		
+AWS Systems Manager
+-------------------
+	Allows you to manage Ec2 instances as scale
+	Run a command on a bunch of EC2 instances. Instead of SSH'ing into each individual one
+	
+Summay Of Cloud Concepts and Technology
+---------------------------------------
+
+
+
+
+
+
+
+
+
+
 
 
 
