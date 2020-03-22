@@ -1,0 +1,71 @@
+Reminders of current setup. Should be able to do this all without following the vids:
+
+	1.  ~Setup IAM user give programatic and console access. Add to a new AdministratorAccess group
+	2.  ~Create an S3 static website hosting bucket, add index and error.html pages
+	3.  ~Make the bucket public (bucketpolicy .json)
+		{
+			"Version": "2012-10-17",
+			"Statement": [
+				{
+					"Sid": "PublicReadGetObject",
+					"Effect": "Allow",
+					"Principal": "*",
+					"Action": [
+						"s3:GetObject"
+					],
+					"Resource": [
+						"arn:aws:s3:::BUCKET_NAME/*"
+					]
+				}
+			]
+		}
+	4.  ~Make a distrubtion system for the website using CloudFront
+	5.  Create EC2 instance, add a security group to allow SSH, HTTP, HTTPS anywhere
+		// Note: May need to create subnet??? I sent an email about this, not sure what's with this issue. Solution is to recreate session maybe.
+	6.  ~SSH into the instance and configurre aws with the accesskey & secret access key of the user.
+	    ~make a new S3 bucket (`aws s3 mb s3://bucketname`)
+	7.  Create a IAM Role, given the S3AdminFullAccess policy
+	8.  Give the EC2 that role
+	9.  rm .aws directory if accesskey and aws secret were setup. This is to allow Roles to be used instead
+	10. ~yum update, yum install httpd -y, service httpd start
+	11. add application loadbalancer
+	12. Launch new instance in a diff AAZ (network)
+		Bootstrap script for the new ec2 instanace chkconfig, cd/var/www/html echo webpage, output to index.html)
+	13. Add other EC2 instance to load balancer, test it out
+	14. Create RDS instance, with an Mysql database
+	15. VPC security groups, add  MYSQL inbound traffic rule for the Security group created before
+	16. Create another EC2 instance (give security group created in previous step), using bootstrap script to install wordpress:
+		#!/bin/bash
+		yum install httpd php php-mysql -y
+		cd /var/www/html
+		wget https://wordpress.org/wordpress-5.1.1.tar.gz
+		tar -xzf wordpress-5.1.1.tar.gz
+		cp -r wordpress/* /var/www/html/
+		rm -rf wordpress
+		rm -rf wordpress-5.1.1.tar.gz
+		chmod -R 755 wp-content
+		chown -R apache:apache wp-content
+		service httpd start
+		chkconfig httpd on
+	17. Wordpress settings, point database to database created in step 14
+	18. SSH into the EC2 instance and add the wp-config.php file
+	19. In load balancers, add the wordpress site to registered groups
+	20. In wordpress settings, use the DNS name instead of IP address for URL
+	21. Create an image using the EC2 instance from previous step
+	22. Terminate EC2 instance
+	23. Create new Launch Configuration (Ec2) using image created in 21
+		add the setup script: yum update -y
+		Existing security group (created before)
+	24. create autoscaling group using previous step launch configuration
+		2 instances
+		all subnets
+		the load balancer
+		ELB health check
+		(Instances take a few minutes to appear. They may say 'failed' at first)
+	25. 
+	
+	
+		
+Route53 is Amazon's DNS service
+One issue with AccessKey & Secretkey, is that the keys are stored in cleartext inside .aws/credentials file
+AMI = Amazon Machine Image
