@@ -1,3 +1,5 @@
+# Cloud Practioner Certification Study Notes
+
 |Object             |Weighting|
 |-------------------|---------|
 |Cloud Concepts     |26%      |
@@ -13,86 +15,125 @@ About The exam
 
 Services part of the exam
 -------------------------
-AWS Global Infrastructure
-Compute
-Storage
-Databases
-Security, Identity & Complicane
-AWS Cost Management
-~Migration & Transfer
-~Network & Content Delivery
 
-Things to know *(Take from exam tips, or mentioned 'remember this for the exam')*
+|Importance:|***                          |***        |***        |***          |***                                |***                    |*                   |*                         |
+|-----------|-----------------------------|-----------|-----------|-------------|-----------------------------------|-----------------------|--------------------|--------------------------|
+|Topic:     |**AWS Global Infrastructure**|**Compute**|**Storage**|**Databases**|**Security, Identity & Compliance**|**AWS Cost Management**|Migration & Transfer|Network & Content Delivery|
+
+
+Things to know *(Taken from exam tips, or mentioned 'remember this for the exam')*
 ---------------------------------------------------------------------------------
 
 These 3 terms & the differences: Avilability Zone vs Edge location vs Region
+
 How to choose a Region / choosing the right region
-[Different support packages] (#support packages)
-[3 ways of accessing the AWS platform] (#IAM)
+
+[Different support packages](#support-packages)
+
+[3 ways of accessing the AWS platform](#IAM)
+
 What is a group? - Group policies etc. Policies consist of JSON
-Test an S3 bucket is successful; You get will always get a HTTP 200 code response when sucessfully creating a bucket
-How data consistency works for S3
-S3 is (Object-based)[#object-based] I.e allows you to upload files.
-Because S3 is object based, it's not suitable for an operating system (And understand why)
-Files in S3 can be from 0 bytes to 5 TB
-There is an unlimited storage
-Files are stored in (Buckets)[#bucket]
+
+How to test an S3 bucket is successful; You get will always get a HTTP 200 code response when sucessfully creating a bucket
+
+[How data consistency works for S3](#S3-Data-Consistency)
+
+S3 is [Object-based](#object-based) I.e allows you to upload files.  
+Because S3 is object based, it's not suitable for an operating system (And understand why)  
+Files in S3 can be from 0 bytes to 5 TB  
+There is unlimited storage  
 S3 is a universal namespace. Names must be globally unique.
-Regonize S3 names. Example: S3-eu-west-1.amazonaws.com/bucketname so eu-west-1 is the region, region will always be present
-S3 read after write consistency for PUTS vs delete or update (new file is automatic, others are (eventual consistency)[#eventual consistency]
-S3 is one of the few services that does not require region selection
-Bucket names share a common name space, you cannot have the same bucket name as someone else
+
+Files are stored in [Buckets](#bucket)
+
+Recognize S3 names. Example: `S3-eu-west-1.amazonaws.com/bucketname` so eu-west-1 is the region, region will always be present  
+Bucket names share a common name space, you cannot have the same bucket name as someone else  
+S3 read after write consistency for PUTS vs delete or update (new file is automatic, others are [eventual consistency](#eventual-consistency)  
+S3 is one of the few services that does not require region selection  
 You view buckets globally, but you can have buckets in individual regions
-You can change encryption, other properties of buckets/objects on the fly
-Know the different ways to restrict bucket access; Bucket policies - applies accross the whole bucket, Object Policies applied to indiviudal files, IAM policies
-You can use bucket policies to make enture S3 buckets public
+
+You can change encryption, other properties of buckets/objects on the fly  
+Know the different ways to restrict bucket access; Bucket policies - applies accross the whole bucket, Object Policies applied to indiviudal files, IAM policies  
+You can use bucket policies to make enture S3 buckets public  
 You can use S3 to host static websites. Not dynamic websites, such as wordpress, Database etc.
+
 S3 scales automatically to meet your demand. Many enterprises will put static websites on S3 when they think there will be a large number of reequests (e.g movie preview)
-Know [CloudFront's 3 key terms](#CloudFront key terms)
-Edge locations are NOT read only. You can write to them, such as putting an object to them
-Objects are cached for the [TTL](#TTL). The TTL is always in seconds
+
+Know [CloudFront's 3 key terms](#CloudFront-key-terms)
+
+Edge locations are NOT read only. You can write to them, such as putting an object to them  
+Objects are cached for the [TTL](#TTL). The TTL is always in seconds  
 You can clear cached objects, but you will be charged for doing so
-EC2 Is a web service that provides Resizeable compute capacity in the cloud. It reduces the time rquired to obtain boot and new server instances to minutes
-[4 pricing models of EC2](#EC2 Pricing Models)
-With spot pricing, you will not be charged for partial usage if terminated by Amazon EC2. You will be charged the full hour however, if you terminate it yourself.
-[EBS](#EBS) GP2, IO2, ST1, SC1
-~[FIGHTDRMCPXZ](#EC2 Instance Types)
-EC2 is a compute based service. It is Not serverless. It's a server!
-Use a private key to connect to EC2
-Security Groups are virtual firewalls in the cloud. You need to open ports to use them
+
+EC2 Is a web service that provides Resizeable compute capacity in the cloud. It reduces the time rquired to obtain boot and new server instances to minutes  
+[4 pricing models of EC2](#EC2-Pricing-Models)  
+With spot pricing, you will not be charged for partial usage if terminated by Amazon EC2. You will be charged the full hour however, if you terminate it yourself.  
+
+[EBS](#EBS) GP2, IO2, ST1, SC1  
+[FIGHTDRMCPXZ](#EC2-Instance-Types)  
+EC2 is a compute based service. It is Not serverless. It's a server!  
+Use a private key to connect to EC2  
 Always design for failure. Have one EC2 isntance in each availability zone
-You can interact with AWS in 3 days; Console, CLI, SDKS
-Load balancers come in 3 different flavours: Application Load Balancers, NEtwork load balancers and Classic load balancers
-Application load balancers are layer 7, network is for extreme performance / static ip addresses and classic is for Tes&dev, keeping costs low. It's outdated
+
+Security Groups are virtual firewalls in the cloud. You need to open ports to use them
+
+You can interact with AWS in 3 ways; Console, CLI, SDKS
+
+Load balancers come in 3 different flavours: Application Load Balancers, Network load balancers and Classic load balancers  
+Application load balancers are layer 7, network is for extreme performance / static ip addresses and classic is for Tes&dev, keeping costs low. It's outdated  
 When using load balancers, use multiple availability zones, incase one goes down
+
 Business intelligence or data warehousing - go for Redshift
+
 Speed up performnace of existing databases (frequent Identical queries) go for Elasticache
+
 Route53 can be used to register domains. It is Amazon's DNS.
+
 Know all the Compute services (Ex. select all the services that are under 'compute')
+
 Know what ElasticBeanstalk is. Also configure an instance using it in the Sandbox for practice
+
 Know what cloudformation is. Also configure for practice
+
 ElsaticBeanstalk is limited in what it can provision and is not programmable. Cloudformation can provision almost any AWS service and is completly programmable.
-Read the white paper the day before the exam: https://d0.awsstatic.com/whitepapers/AWS_Cloud_Best_Practices.pdf
-Know [which services can be used on premise](#Which AWS Services can be used on premise)
-Cloudwatch is used for monitoring performance
-Cloudwatch can monitor most of AWS as applications un on AWS
-Cloudwatch with Ec2 will monitor events every 5 minutes by default
-Cloudwatch - You have 1 minute intervals by turning on detailed monitoring
+
+Read the white paper the day before the exam: https://d1.awsstatic.com/whitepapers/AWS_Cloud_Best_Practices.pdf
+
+Know [which services can be used on premise](#Which-AWS-Services-can-be-used-on-premise)
+
+Cloudwatch is used for monitoring performance  
+Cloudwatch can monitor most of AWS as applications un on AWS  
+Cloudwatch with Ec2 will monitor events every 5 minutes by default  
+Cloudwatch - You have 1 minute intervals by turning on detailed monitoring  
 Cloudwatch is all about performance
+
 Know the difference between cloud watch, cloud trail, aws inspector, aws trusted advisor.
+
 Systems Manager can be used to manage fleets of EC2 instances & Virtual Machines
-	Can be both inside AWS and on premise. Run command is used to install, patch, uninstall software
+  - Can be both inside AWS and on premise. Run command is used to install, patch, uninstall software
+  
 Systems Manager integrates with CloudWatch to give you a dashboard of your entire estate
+
 Know the 6 Advantages of Cloud
+
 Know the 3 types of cloud computing (IASS, PAAS, SAAS)
+
 Know the 3 types of computing deployments (public cloud, hybrid, private cloud)
+
 Choosing the right AWS Region - Data soverignty laws, Latency to end users, AWS services needed
+
 Read up on the different Route 53 policies: https://docs.aws.amazon.com/Route53/latest/DeveloperGuide/routing-policy.html
+
 Cloudformation template sections: https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/template-anatomy.html
+
 A CloudFront origin can be a Route53, EC2, S3 bucket
+
 The collection of a CDN's Edge Locations is called a Distribution.
+
 To restrict access to an entire bucket, you use bucket policies; and to restrict access to an individual object, you use access control lists.
-Which oare valid access types for an IAM user?
+
+Which are valid access types for an IAM user?
+
 What is Lightsail?
 
 
@@ -171,12 +212,12 @@ Think of it like renting a computer.
 	[Also see Data consistenct for S3] (#S3-detail)
 	
 ### IAM
-**IAM**
-	Identity Access Management. is it Global, Not per region
-	3 ways of setting up user access: 
-		Programmatic access - access key ID and secret access key for development tools
-		Management console access - password
-		Amazon SDK
+**Identity Access Management**. is it Global, Not per region
+	
+**3 ways of setting up user access:**
+- Programmatic access - access key ID and secret access key for development tools
+- Management console access - password
+- Amazon SDK
 		
 ### ETL
 **ETL**
@@ -221,6 +262,9 @@ Think of it like renting a computer.
 
 ### OLAP
 **OLAP** - Online Analytics Processing (see here)[#OLTP VS OLAP]
+
+### Object based
+**Object based** - consists of meta data
 	
 	
 Types of Cloud Computing Deployments:
@@ -285,7 +329,7 @@ Secure your data using Access Control Lists and Bucket Policies
 **S3 - Charges**
 	Storage
 	Requests
-	Storage Maangement Pricing
+	Storage Management Pricing
 	Data Transfer Pricing
 	Transfer Acceleration - Enables fast, easy and secure transfers of files over long distances between users and an S3 bucket. Takes advantage of CloudFront's Edge Locations
 	Cross Region Replication Pricing - E.g when uploading a file, Amazon will automatically replicate the file in the closest region bucket
