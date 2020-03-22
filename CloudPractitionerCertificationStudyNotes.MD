@@ -67,6 +67,9 @@ Application load balancers are layer 7, network is for extreme performance / sta
 When using load balancers, use multiple availability zones, incase one goes down
 Business intelligence or data warehousing - go for Redshift
 Speed up performnace of existing databases (frequent Identical queries) go for Elasticache
+Route53 can be used to register domains. It is Amazon's DNS.
+Know all the Compute services (Ex. select all the services that are under 'compute')
+Know what ElasticBeanstalk is. Also configure an instance using it in the Sandbox for practice
 
 
 Q: How would you create a notification for going over $1000? 
