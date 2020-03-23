@@ -145,9 +145,11 @@ AWS storage gateway https://docs.aws.amazon.com/storagegateway/latest/userguide/
 
 Features of AWS Organizations
 
-EMR??
+EMR (Elastic MapReduce) - https://aws.amazon.com/emr/  
+Interact with a DataLake. Uses Hadoop and apache spark, handles most of the configuration for you. Scales up/down as needed
 
-DMS?? https://aws.amazon.com/dms/
+DMS- https://aws.amazon.com/dms/  
+Database Migration Service. Handles converting a database for you. In less time, lower cost. 3$ per terabyte
 
 
 Q: How would you create a notification for going over $1000? 
