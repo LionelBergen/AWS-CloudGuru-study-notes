@@ -1,3 +1,10 @@
+General tips
+------------
+Read the certification FAQ: https://aws.amazon.com/certification/faqs
+Read exam blueprint and ensure you know everything in scope
+Check the acloud fourms for the certs, people post about topics they were surprised / needed to study more after taking the cert exam
+
+
 # AWS-CloudGuru-study-notes
 Notes taken from cloud guru videos in preparing for the 'AWS Certificate Solutions Architect Associate Exam'.
 

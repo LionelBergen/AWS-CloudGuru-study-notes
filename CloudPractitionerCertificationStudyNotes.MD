@@ -151,6 +151,13 @@ Interact with a DataLake. Uses Hadoop and apache spark, handles most of the conf
 DMS- https://aws.amazon.com/dms/  
 Database Migration Service. Handles converting a database for you. In less time, lower cost. 3$ per terabyte
 
+DT - Downtime
+
+RTO - Recovery Time Objective
+
+RPO - Recovery Point Objective
+
+ERP - Enterprise Resource Application
 
 Q: How would you create a notification for going over $1000? 
 A: Create a 'BillingAlarm', which uses an [SNS Service] (#SNS) to email you when you go over $1000 in billing
