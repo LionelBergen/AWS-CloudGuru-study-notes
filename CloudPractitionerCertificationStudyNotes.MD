@@ -20,6 +20,12 @@ Services part of the exam
 |-----------|-----------------------------|-----------|-----------|-------------|-----------------------------------|-----------------------|--------------------|--------------------------|
 |Topic:     |**AWS Global Infrastructure**|**Compute**|**Storage**|**Databases**|**Security, Identity & Compliance**|**AWS Cost Management**|Migration & Transfer|Network & Content Delivery|
 
+Notes to add / things I feel I don't know enough about
+------------------------------------------------------
+What is Lightsail
+
+3 types of cloud computing (public, private, hybrid)
+
 
 Things to know *(Taken from exam tips, or mentioned 'remember this for the exam')*
 ---------------------------------------------------------------------------------
