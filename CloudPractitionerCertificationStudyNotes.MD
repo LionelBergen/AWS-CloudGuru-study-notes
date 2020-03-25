@@ -206,14 +206,16 @@ Think of it like renting a computer.
 ### Infrastructure As A Service
 	1) IAAS - Infrastructure As A Service
 		Database, storage - Physical or vertual, the provider usually has no access to your server.
+		**EC2**
 ### PAAS
 ### Platform As A Service
 	2) PAAS - Platform As A Service
 		Hardware & Operating system. Soemone else worried about security, patching, updates etc
+		**GoDaddy**, *ElasticBeanstalk**, **Lightsail**
 ### SAAS
 ### Software As A Service
 	3) Software As A Service (SAAS)
-		Software. Example is GMAIL
+		**Software**. **GMAIL**
 		
 ### CDN
 **CDN**
