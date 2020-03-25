@@ -24,6 +24,8 @@ Notes to add / things I feel I don't know enough about
 ------------------------------------------------------
 What is Lightsail
 
+What is ElasticBeanstalk
+
 3 types of cloud computing (public, private, hybrid)
 
 
