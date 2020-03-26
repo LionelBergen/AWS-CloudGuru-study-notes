@@ -28,6 +28,22 @@ What is ElasticBeanstalk
 
 3 types of cloud computing (public, private, hybrid)
 
+Support plans: Basic, Developer, Business, Enterprise
+
+What are Access Control Lists? What are 'Bucket control lists' (if they exist?) What are Bucket policies & ACL VS bucket policies
+
+What is cloudformation and cloudformation templates
+
+Know cloudFront more
+
+What are S3-IA and S3-RRS (if they exist)
+
+Know consolidated billing inside & out. What does it mean? What does it look like
+
+Know more about Route53
+
+Know what 'Distribution' is. Add to terms
+
 
 Things to know *(Taken from exam tips, or mentioned 'remember this for the exam')*
 ---------------------------------------------------------------------------------
