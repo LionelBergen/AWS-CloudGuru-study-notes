@@ -22,14 +22,6 @@ Services part of the exam
 
 Notes to add / things I feel I don't know enough about
 ------------------------------------------------------
-What is Lightsail
-
-What is ElasticBeanstalk
-
-3 types of cloud computing (public, private, hybrid)
-
-Support plans: Basic, Developer, Business, Enterprise
-
 What are Access Control Lists? What are 'Bucket control lists' (if they exist?) What are Bucket policies & ACL VS bucket policies
 
 What is cloudformation and cloudformation templates
@@ -52,7 +44,7 @@ These 3 terms & the differences: Avilability Zone vs Edge location vs Region
 
 How to choose a Region / choosing the right region
 
-[Different support packages](#support-packages)
+[Different support packages](#support-packages). Know them well
 
 [3 ways of accessing the AWS platform](#IAM)
 
@@ -115,7 +107,7 @@ Route53 can be used to register domains. It is Amazon's DNS.
 
 Know all the Compute services (Ex. select all the services that are under 'compute')
 
-Know what ElasticBeanstalk is. Also configure an instance using it in the Sandbox for practice
+Know what (ElasticBeanstalk)[#ElasticBeanstalk] is. Also configure an instance using it in the Sandbox for practice
 
 Know what cloudformation is. Also configure for practice
 
@@ -142,7 +134,7 @@ Know the 6 Advantages of Cloud
 
 Know the 3 types of cloud computing (IASS, PAAS, SAAS)
 
-Know the 3 types of computing deployments (public cloud, hybrid, private cloud)
+Know the 3 types of computing deployments (public cloud, hybrid, private cloud)[#public-vs-private-vs-hybrid]
 
 Choosing the right AWS Region - Data soverignty laws, Latency to end users, AWS services needed
 
@@ -158,7 +150,7 @@ To restrict access to an entire bucket, you use bucket policies; and to restrict
 
 Which are valid access types for an IAM user?
 
-What is Lightsail?
+What is (Lightsail)[#Amazon-LightSail]?
 
 AWS Organizations??
 
@@ -317,7 +309,9 @@ Think of it like renting a computer.
 	
 Types of Cloud Computing Deployments:
 -------------------------------------
-	
+A cloud is basically a datacenter, which has its resources split up, into virtualized components.
+
+### public vs private vs hybrid
 	1) Public Cloud
 		AWS, Azure, GCP
 	2) Hybrid
@@ -493,16 +487,22 @@ How to choose a Region / choosing the right region / Why choose particular
 ### support packages
 Different support packages
 --------------------------
-Basic - Access to fourms
-	FREE
-Developer - Support within 12-24 hour response time though Support Center during local business hours 
-	Use Case: Experiments with AWS
-	$29/month
-Business - 24x7 support by phone and chat 1-hour response to urgent support cases 
-	Use Case: Production use of AWS
+**Basic** - Access to fourms  
+Email supprt for Billing and Account only  
+FREE
+
+**Developer** - Support within 12-24 hour response time though Support Center during local business hours  
+Use Case: Experiments with AWS  
+No third party support (E.g rails)  
+Tech support via email ~24 hours for reply  
+$29/month
+
+**Business** - 24x7 support by phone and chat 1-hour response to urgent support cases  
+	Use Case: Production use of AWS   
 	$100/month
-Enterprise - TAM Technical Account Manager, 15 minute reponse time to urgent support cases
-	Use Case: Mission-critical use of AWS
+
+**Enterprise** - TAM Technical Account Manager, 15 minute reponse time to urgent support cases  
+	Use Case: Mission-critical use of AWS  
 	$15,000/month
 
 Databases 101
@@ -694,12 +694,19 @@ AWS Systems Manager
 	Allows you to manage Ec2 instances as scale
 	Run a command on a bunch of EC2 instances. Instead of SSH'ing into each individual one
 	
-Summay Of Cloud Concepts and Technology
----------------------------------------
+	
+Other *(Notes from outside the course, based on practice exam / other missing information)*
+-------------------------------------------------------------------------------------------
+### Amazon LightSail
+Easy way to get started with a VPS solution  
+Simple user interface for building blogs, simple E-commerce, other websites.  
+Application templates include Wordpress, Drupel, Joomla!, LAMP and more.  
+Allows for snapshots and easy DNS setup
 
-
-
-
+### ElasticBeanstalk
+Use an UI to manage load balancing, providing, auto scaling, health monitoring etc for you. To allow developers to only worry about their code, not the infrastructure  
+You can take control over all or any resources so you don't have to live with preconfigured resources  
+Is free, but stuff created from it are not. E.G provisioned EC2 instances
 
 
 
