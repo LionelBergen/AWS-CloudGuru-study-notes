@@ -12,13 +12,16 @@ Need as 720/1000 for passing
 Relavent sections
 -----------------
 
-AWS Global Infrastructure  
-Compute  
-Storage  
-Databases  
-Migration & Transfer  
-Network & Content Delivery  
-Developer Tools  
-Management & Governance
-Media Services  
-Machine Learning
+|Section                        |Importance|
+|-------------------------------|----------|
+|AWS Global Infrastructure      |***       |
+|Compute                        |***       |
+|Storage                        |***       |
+|Databases                      |***       |
+|Migration & Transfer           |*         |
+|Network & Content Delivery     |***       |
+|Machine Learning               |*         |
+|Management & Governance        |*         |
+|Analytics                      |*         |
+|Security, Identity & Compliance|***       |
+|Desktop & App Streaming        |*         |
