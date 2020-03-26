@@ -34,8 +34,6 @@ Know consolidated billing inside & out. What does it mean? What does it look lik
 
 Know more about Route53
 
-Know what 'Distribution' is. Add to terms
-
 
 Things to know *(Taken from exam tips, or mentioned 'remember this for the exam')*
 ---------------------------------------------------------------------------------
@@ -144,7 +142,7 @@ Cloudformation template sections: https://docs.aws.amazon.com/AWSCloudFormation/
 
 A CloudFront origin can be a Route53, EC2, S3 bucket
 
-The collection of a CDN's Edge Locations is called a Distribution.
+The collection of a CDN's Edge Locations is called a (Distribution)[#CloudFront-key-terms].
 
 To restrict access to an entire bucket, you use bucket policies; and to restrict access to an individual object, you use access control lists.
 
