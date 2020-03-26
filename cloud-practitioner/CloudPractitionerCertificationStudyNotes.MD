@@ -303,6 +303,8 @@ Think of it like renting a computer.
 
 ### Object based
 **Object based** - consists of meta data
+
+### EFC - Elsatic File Service
 	
 	
 Types of Cloud Computing Deployments:
