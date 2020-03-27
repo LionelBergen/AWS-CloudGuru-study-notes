@@ -1,0 +1,2 @@
+Create IAM user with programmatic & console access and new group, with admin access
+Create User role for EC2, S3fullaccess 
