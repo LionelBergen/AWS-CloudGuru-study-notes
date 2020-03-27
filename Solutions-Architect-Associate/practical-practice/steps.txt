@@ -1,2 +1,5 @@
 Create IAM user with programmatic & console access and new group, with admin access
 Create User role for EC2, S3fullaccess 
+
+Create billing alarm - dont skip this step, to reinforce knowledge on which service is used to create one, and SNS topics
+
