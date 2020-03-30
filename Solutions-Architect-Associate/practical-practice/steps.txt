@@ -3,3 +3,4 @@ Create User role for EC2, S3fullaccess
 
 Create billing alarm - dont skip this step, to reinforce knowledge on which service is used to create one, and SNS topics
 
+Create an S3 bucket with versioning, and a couple Lifecycle rules to move objects to glacier automatically

@@ -11,9 +11,18 @@ Know the fundamentals of S3 (Key, value, versionID metadata, subresources (ACLs,
 Know the Read/write consistencies of S3  
 Know the different storage clasees (standard, IA, One Zone IA, S3 Glacier, S3 Glacier Deep Archive, Intelligent Tiering)  
 RSS/S3 RSS - think of S3 one zone IA. RSS is being phased out.  
-Read the S3 FAQ's - https://aws.amazon.com/s3/faqs/
+Read the S3 FAQ's - https://aws.amazon.com/s3/faqs/  
+Understand how to get the best value of S3 price wise. Intelligent tiering has a tiny monitoring cost per 1,000 objects. Avoid S3 standard
 
 ACL VS Bucket policies - ACL can be down to the indiviudal objects (individual files). They are JSON. Bucket policy applies to the entire bucket.
+
+Versioning in S3 stores deletes & writes to an object. Remember deleting the delete of an object to restore it  
+great backup tool, integrates lifecycle rules  
+MFA delete capability  
+Once enabled, cannot be disabled. Only suspended
+
+Lifecycle automates moving objects between different storage tiers  
+Can be used in conjunction with versioning
 
 
 Key terms
@@ -51,6 +60,25 @@ S3 Glacier Deep Archive  Lowest cost storage, retrieval time of 12 hours is acce
   Data Transfer Pricing  
   Transfger Acceleration  
   Cross region replicaiton
+  
+**Security & Encryption**  
+You can log requests/access in another S3 bucket. Or even send the logs to another bucket in another account
+
+**SSL/TLS** - Encryption in Transit is always achieved using this
+
+**Encryption at Rest (Server Side) is achieved by**  
+S3 Managed Keys - SSE-S3  
+AWS Management Service, Managed Keys SSE-KMS  
+Server Side Encryption with Customer PRovided Keys SSE-C  
+Client Side Encryption (upload encrypted object)
+
+**versioning**  
+Stores all versions of an object (including all writes and even if you delete an object  
+Greate backup tool  
+Once eneabled, you cannot disable. Only disabled  
+Integrated with Lifecycle rules  
+Comes with MFA delete capability  
+When uploading a newversion, the file is automatically made private again
   
 IAM
 ---
