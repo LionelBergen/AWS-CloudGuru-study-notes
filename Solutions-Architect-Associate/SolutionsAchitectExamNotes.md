@@ -24,12 +24,20 @@ Once enabled, cannot be disabled. Only suspended
 Lifecycle automates moving objects between different storage tiers  
 Can be used in conjunction with versioning
 
+Always enable multi-factor authentication on root account  
+Paying account should be used for billing purposes only. Don't deploy resources into the paying account  
+Enable/disable AWS services using SCP (Service Control Policies)
+
+(Know the 3 different ways to share S3 buckts accross accounts)[#S3-Cross-Account-Access-3-ways]
+
 
 Key terms
 ---------
 
 ### SNS Topic
 SNS Topic - A way of emailing you when your bill goes over a certain amount. Inside CloudWatch
+
+(SCP Service Control Policies)[#Service Control Policies]
 
 
 S3
@@ -79,6 +87,11 @@ Once eneabled, you cannot disable. Only disabled
 Integrated with Lifecycle rules  
 Comes with MFA delete capability  
 When uploading a newversion, the file is automatically made private again
+
+### S3 Cross Account Access 3 ways
+Use Bucket Policies & IAM (applies across the entire bucket). Programmatic Access Only.  
+Using Bucketr ACLS & IAM (individual objects). Programmatic Access Only.  
+Cross-account IAM Roles. Programatic AND Console access.
   
 IAM
 ---
@@ -86,3 +99,32 @@ PCI DSS compliance (relates to Credit card transactions)
 IAM policies are made up of Documents. Documents are written in JSON  
 IAM - new users have no permissions when first created  
 new users are assigned access key ID and secret access keys when first created. These are not the same as passwords. It's only for programmatic access
+
+AWS Organization & Consolidated Billing
+---------------------------------------
+
+### AWS Organizations  
+Account management service enables you to consolidate multiple AWS accounts to centrally manage  
+Best practice use Root account for Billing only.  
+**OU** Organization Unit, consists of AWS accounts, and other OUs. Can apply Policies to them.  
+Paying Account is independent. Cannot access resources of other accounts. All linked accounts are independent.
+
+### Consolidated Billing  
+**Advantages of Consolidated Billing** One bill per AWS account  
+Easy to track charges and allocate costs  
+Volume pricing discount
+
+### Service Control Policy  
+Applied to Organizational Units or Accounts. Used to restrict what the accounts can do
+
+
+
+
+
+
+
+
+
+
+
+
