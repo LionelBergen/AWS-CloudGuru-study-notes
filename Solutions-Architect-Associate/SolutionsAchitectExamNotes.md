@@ -30,6 +30,22 @@ Enable/disable AWS services using SCP (Service Control Policies)
 
 (Know the 3 different ways to share S3 buckts accross accounts)[#S3-Cross-Account-Access-3-ways]
 
+Versioning must be enabled on both source and destination buckets  
+Files in existing bukcets are NOT replicated automatically.  
+All files after turning on replication will be replicated automatically  
+Delete markets are not replicated. Deleted individual versions are not replicated.  
+Know what Cross Region Replication is at a high level.
+
+Know what S3 Transfer Acceleration is
+
+Know what an Edge Location, Origin, Distribution is.  
+Web Distribution - Typically used for Websites  
+RTMP - Media streaming  
+Edge locations are not just READ, you can write. Objectes are cahced for TTL. You can clear cached objects, but you will be charged.
+
+Know what Snowball is  
+It can Import to S3 & Export from S3.
+
 
 Key terms
 ---------
@@ -92,6 +108,9 @@ When uploading a newversion, the file is automatically made private again
 Use Bucket Policies & IAM (applies across the entire bucket). Programmatic Access Only.  
 Using Bucketr ACLS & IAM (individual objects). Programmatic Access Only.  
 Cross-account IAM Roles. Programatic AND Console access.
+
+### S3 transfer Acceleration  
+Transfer to Edge locations which use AWS network to transfer to the bucket
   
 IAM
 ---
@@ -117,10 +136,18 @@ Volume pricing discount
 ### Service Control Policy  
 Applied to Organizational Units or Accounts. Used to restrict what the accounts can do
 
+CloudFront
+----------
 
+A CDN (Content Delivery Network). Delivers webpages & other web content to a user  
+An Origin is the origin of all the files CDN distribute. It can be S3 bucket, ec2 instance or route53 or load balancer  
+Distribution - name given o the CDN which consists of a collection of edge Locations  
 
-
-
+Snowball
+--------  
+Used to move large amounts of data in/out of S3. A snowball is a petabyte in size  
+Snowball Edge is a Snowball, with compute power. So you can run Lambda functions for example on your data    
+Snowmobile is a 45 foot container pulled by a semi truck, used to move Extrabytes? of data. Such as moving an entire data center
 
 
 
