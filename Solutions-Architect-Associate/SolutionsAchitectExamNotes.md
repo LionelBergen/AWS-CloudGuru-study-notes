@@ -53,6 +53,26 @@ Gateway Virtual Tape Library
 
 Remember what Athena and Macie are.
 
+What are 'power users'??  
+Know what 'biometric atuhentication is, and what best practices include it. Does it use passwords?  
+Know that IAM integrates with existing active directory account, allowing SSO
+
+You can have 100 S3 buckets per account by default
+
+Know CloudFront signed cookies, signed URLS and origin Access identity are & used for.
+
+Read: https://docs.aws.amazon.com/AmazonS3/latest/dev/UploadingObjects.html
+
+AWS can accomodate higher PUTS in S3 buckets. Back in 2018 there was a hard limit of 100.
+
+What is the availability of S3-OneZone-IA?... 99.50%. https://aws.amazon.com/s3/storage-classes/?nc=sn&loc=3
+
+Know recovery processes and use cases for S3 glacier. https://docs.aws.amazon.com/AmazonS3/latest/user-guide/restore-archived-objects.html
+
+Know the S3 consistency modles... Read After Write Consistency?
+
+Know these 3: The Virtual Hosted Style URL, the Path-Style Access URL, the Static web site URL, and the Legacy Global Endpoint URL
+
 
 Key terms
 ---------
