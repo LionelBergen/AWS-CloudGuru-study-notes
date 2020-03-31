@@ -5,3 +5,6 @@ Create billing alarm - dont skip this step, to reinforce knowledge on which serv
 
 Create an S3 bucket with versioning, and a couple Lifecycle rules to move objects to glacier automatically
 Add Replication to that same versioning bucket
+
+Create another bucket  
+Add CloudFront Distrubtion, add an image to the bucket and test the url

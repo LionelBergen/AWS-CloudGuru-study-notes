@@ -46,6 +46,13 @@ Edge locations are not just READ, you can write. Objectes are cahced for TTL. Yo
 Know what Snowball is  
 It can Import to S3 & Export from S3.
 
+File gateway is used for Flat files, stored directly on S3  
+Volume Gateway Entire dataset is stored on site and asynchronously backed up to S3  
+Cached Volumes Entire dataset is stored on S3 AND the most frequently accessed data is cached on site  
+Gateway Virtual Tape Library 
+
+Remember what Athena and Macie are.
+
 
 Key terms
 ---------
@@ -54,6 +61,10 @@ Key terms
 SNS Topic - A way of emailing you when your bill goes over a certain amount. Inside CloudWatch
 
 (SCP Service Control Policies)[#Service Control Policies]
+
+PII - (Personally Identifiable Information)
+
+NLP - Natural Language Processing
 
 
 S3
@@ -149,8 +160,37 @@ Used to move large amounts of data in/out of S3. A snowball is a petabyte in siz
 Snowball Edge is a Snowball, with compute power. So you can run Lambda functions for example on your data    
 Snowmobile is a 45 foot container pulled by a semi truck, used to move Extrabytes? of data. Such as moving an entire data center
 
+Storage Gateway
+---------------  
+Service that connects on-premises software appliance with cloud-based storage. Virtual, or physical device.  
+The software appliance is avialable as a VM image.  
+**3 flavours**:  
+*File gateway (NFS & SMB)*  
+  Files are stored as objects in your S3 buckets. Acced through Network File System (NFS) mount point.  
+*Volume Gatway*  
+Virtual hard disks to S3, EBS  
+  Stored Volumes  
+Store primary data locally. Backs data up to AWS  
+  Cached Volumes  
+Not the whole dataset, only the most Frequently used data. Stored in S3.  
+*Tape Gateway (VTG)*  
+Cost effective solution to archive data in the AWS cloud. Used to replace existing Tape solutions  
 
+Athena vs Macie
+---------------
+**Athena** Is an interactive query service. Analyse and query  data in S3 using standard SQL.  
+Serverless, No need to setup ETL (Extract/Transform/Load). Works directly with data stored in S3  
+Pay per query / per TB scanned
 
+**When to use Athena**: Query log files stored in S3, generate reports on data stored in S#, analyse AWS cost and usage reports, run queries on click-stream data
+
+**Macie** Security service that uses ML and NLP to discover, classify and protect sensitive data stored in S3  
+Uses AI to recognise if S3 objects contain sensitive data such as PII  
+Dashboards, reporting and alerts. Works directly with data stored in S3 can also anlyser CloudTrail logs  
+Good for preventing ID theft
+
+**What is PII (Personally Identifiable Information)?** Personal data to establish an individual's identity  
+Home address, email address, SSN, passport number, drivers license number, DOB, phone number bank account..
 
 
 
