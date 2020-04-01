@@ -73,6 +73,8 @@ Know the S3 consistency modles... Read After Write Consistency?
 
 Know these 3: The Virtual Hosted Style URL, the Path-Style Access URL, the Static web site URL, and the Legacy Global Endpoint URL
 
+Reserved VS on demand VS dedicated hosts vs spot for pricing
+
 
 Key terms
 ---------
