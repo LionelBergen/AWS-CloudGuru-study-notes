@@ -88,6 +88,8 @@ PII - (Personally Identifiable Information)
 
 NLP - Natural Language Processing
 
+AMI - Amazon Machine Image. Think of the different EC2 instance types, linux red hat etc
+
 
 S3
 --
