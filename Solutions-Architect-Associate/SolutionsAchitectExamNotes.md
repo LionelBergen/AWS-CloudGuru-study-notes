@@ -75,6 +75,13 @@ Know these 3: The Virtual Hosted Style URL, the Path-Style Access URL, the Stati
 
 Reserved VS on demand VS dedicated hosts vs spot for pricing
 
+You CAN encrypt the root volume of a hard disk.  
+Root volume has the OS on it  
+Termination protection is turned off by default  
+On EBS-backed instance, the default action is for the root EBS volume to be deleted when instance is terminated
+
+Changing security group rules, the changes take effect immediatly.
+
 
 Key terms
 ---------
